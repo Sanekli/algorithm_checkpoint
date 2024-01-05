@@ -1,0 +1,24 @@
+ALGORITHM Sentence
+VAR 
+    sentence_length:INTEGER := 0
+    word_count:INTEGER := 0
+    vowel_count:INTEGER := 0
+BEGIN
+FOR i FROM 0 TO length of sentence - 1 STEP 1 DO
+    char := character at index i in sentence
+    sentence_length := sentence_length + 1
+    IF char is a letter AND NOT char is a space THEN
+        IF char is a vowel THEN
+            vowel_count := vowel_count + 1
+        END_IF
+    END_IF
+    IF char is a space THEN
+        word_count := word_count + 1
+    END_IF
+END_FOR
+    word_count := word_count + 1
+    Write(Length of the sentence:, sentence_length)
+    Write(Number of words in the sentence:, word_count)
+    Write(Number of vowels in the sentence:, vowel_count)
+END
+
